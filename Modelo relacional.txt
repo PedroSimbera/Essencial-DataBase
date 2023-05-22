@@ -1,0 +1,18 @@
+O modelo relacional é uma abordagem amplamente utilizada para a organização e estruturação de bancos de dados. Ele foi introduzido por Edgar F. Codd em um artigo seminal intitulado "A Relational Model of Data for Large Shared Data Banks" (Modelo Relacional de Dados para Bancos de Dados Compartilhados) publicado em 1970. Neste artigo, Codd apresentou os princípios fundamentais do modelo relacional e propôs a representação dos dados em forma de tabelas, utilizando o conceito de relacionamentos entre elas.
+
+De acordo com Codd, no modelo relacional, "dados são representados pelo uso de estruturas matemáticas chamadas de relações" (Codd, 1970). Cada relação é representada por uma tabela, onde as colunas representam os atributos e as linhas representam as tuplas (registros) dos dados. Os relacionamentos entre as tabelas são estabelecidos por meio de chaves primárias e chaves estrangeiras, que permitem a integridade referencial.
+
+O modelo relacional é baseado em uma sólida fundamentação teórica. Por exemplo, Chris Date, um renomado autor e especialista em banco de dados, destaca que "o modelo relacional tem uma fundamentação matemática rigorosa, em particular, na teoria dos conjuntos e na lógica matemática" (Date, 2012). Essa base teórica proporciona uma estrutura sólida para a manipulação e recuperação de dados, além de garantir a consistência e a integridade dos dados armazenados.
+
+Uma das vantagens do modelo relacional é sua capacidade de suportar consultas complexas e operações de junção de forma eficiente. Date observa que "o modelo relacional é uma base sólida para a implementação de sistemas de banco de dados, principalmente porque é capaz de expressar consultas e atualizações de maneira simples, concisa e poderosa" (Date, 2012)
+
+O modelo relacional é dividido em três perspectivas principais: o modelo conceitual, o modelo lógico e o modelo físico. Cada perspectiva representa uma etapa diferente no projeto e implementação de um banco de dados relacional.
+
+Modelo Conceitual:
+O modelo conceitual representa a visão mais abstrata e de alto nível do banco de dados. Ele descreve a estrutura e os relacionamentos dos dados em termos de entidades, atributos e associações. O modelo conceitual é comumente representado por meio de diagramas de entidade-relacionamento (DER), onde as entidades são representadas por retângulos e os relacionamentos são indicados por linhas que conectam as entidades. Esses diagramas ajudam a identificar os requisitos do sistema e a entender a semântica dos dados.
+
+Modelo Lógico:
+O modelo lógico é uma representação mais detalhada e estruturada do banco de dados. Ele descreve como as entidades, atributos e relacionamentos são mapeados em tabelas e colunas no banco de dados relacional. O modelo lógico é especificado por meio de uma linguagem de definição de dados (DDL), como o SQL (Structured Query Language), e pode incluir restrições, chaves primárias, chaves estrangeiras e outras regras de integridade.
+
+Modelo Físico:
+O modelo físico se concentra na implementação real do banco de dados, considerando aspectos de desempenho e armazenamento. Ele descreve como os dados são armazenados nos dispositivos de armazenamento, como discos rígidos, e como as consultas são executadas de maneira eficiente. O modelo físico envolve decisões como a escolha de índices, estratégias de particionamento, otimização de consultas e considerações de segurança.
