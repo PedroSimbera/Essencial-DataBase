@@ -1,0 +1,15 @@
+As especificações de requisitos em desenvolvimento de software e banco de dados são documentos que descrevem de forma detalhada as funcionalidades, comportamentos e restrições que o sistema deve atender. Essas especificações servem como base para o desenvolvimento do software e para o projeto do banco de dados, garantindo que todas as necessidades e expectativas do cliente sejam atendidas.
+
+Geralmente, as especificações de requisitos incluem os seguintes elementos:
+
+Visão geral: Uma descrição geral do sistema, incluindo seu propósito, contexto e objetivos.
+
+Requisitos funcionais: Descrição detalhada das funcionalidades e comportamentos que o sistema deve oferecer, especificando como ele deve responder a diferentes entradas e eventos. Os requisitos funcionais podem ser apresentados em forma de casos de uso, fluxos de trabalho, diagramas de sequência ou outras representações.
+
+Requisitos não funcionais: Especificação dos atributos de qualidade do sistema, como desempenho, escalabilidade, segurança, usabilidade e confiabilidade. Esses requisitos definem as restrições e padrões que o sistema deve atender em termos de características técnicas.
+
+Requisitos de dados: Definição dos requisitos relacionados à estrutura e ao gerenciamento dos dados no sistema. Isso pode incluir a especificação dos tipos de dados, relacionamentos entre entidades, restrições de integridade, regras de validação e requisitos de desempenho do banco de dados.
+
+Restrições e limitações: Identificação de quaisquer restrições técnicas, orçamentárias, regulatórias ou de recursos que possam afetar o desenvolvimento e a implantação do sistema.
+
+É importante ressaltar que a documentação de requisitos pode variar dependendo da metodologia de desenvolvimento utilizada (como waterfall, ágil, entre outras). Além disso, as especificações de requisitos podem ser iterativas, sendo atualizadas e refinadas à medida que o entendimento dos requisitos evolui durante o processo de desenvolvimento.
