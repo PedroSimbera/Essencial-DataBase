@@ -1,0 +1,16 @@
+SQL - Structured Query Language - uma linguagem padrão ANSI - American National Standards Institute - para a operação
+em banco de dados relacionais. A linguagem contém um grande conjunto de operadores para dividir e combinar relações. 
+É possível modificar o bando de dados usando as instruções SQL.
+
+É dividida em categorias:
+1 - DQL - Data Query Language - Recuperação de dados - SELECT
+2 - DML - Data Manipulation Language   - INSERT - UPDATE - DELETE
+3 - DDL - Data Definition Language     - CREATE - ALTER - DROP - RENAME - TRUNCATE 
+4 - TCL - Controle de transações       - COMMIT - ROLLBACK -SAVEPOINT     
+5 - DCL - Data Control Language        - GRANT - REVOKE
+
+Sobre as cláusulas:
+ - Não são case sensitive - pode ser maiúsculo ou minúsculo
+ - As cláusulas como palavra-chaves não podem ser apreviados
+ - Pode ter saltos de linha, espaços maiores entre cada um
+ - É geralmente utilizado uma cláusula por linha
