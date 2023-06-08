@@ -1,0 +1,65 @@
+create table disciplina(
+    cd_disciplina numeric(10) primary key,
+    nm_disciplina varchar2(50) not null,
+    qt_carga_horaria numeric(3)
+);
+--se não houvesse já criado a primary key, poderia adicionar assim:
+alter table disciplina
+add constraint cd_disciplina_pk primary key (cd_disciplina);
+
+create table professor(
+    cd_professor numeric(10) primary key,
+    nm_professor varchar2(100) not null,
+    ic_sexo_professor char(1) check (ic_sexo_professor='M' or ic_sexo_professor='F' or ic_sexo_professor='O'),
+    cd_cpf numeric(11) unique,
+    cd_disciplina numeric(10) references disciplina (cd_disciplina)
+);
+
+create table aluno(
+    cd_registro_academico numeric(15) primary key,
+    cd_cpf_aluno numeric (11) unique,
+    nm_aluno varchar2(100) not null,
+    dt_matricula date
+);
+
+
+alter table aluno
+add dt_nascimento_aluno date;
+
+alter table professor
+modify cd_professor numeric(15);
+
+desc aluno
+
+desc professor
+
+alter table disciplina
+modify qt_carga_horaria not null;
+
+desc disciplina
+
+alter table aluno
+rename column dt_matricula to dt_matricula_aluno;
+
+desc aluno
+
+alter table aluno
+add nm_mae_aluno varchar2(100);
+
+alter table aluno
+add nm_pai_aluno varchar2(100);
+
+alter table aluno
+drop column nm_pai_aluno;
+
+create table aulas(
+    cd_aula numeric(5) primary key
+);
+
+rename aulas to aula;
+desc aulas
+desc aula
+
+drop table aula;
+FLASHBACK  TABLE  aula  TO  BEFORE DROP; 
+desc aula
