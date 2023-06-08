@@ -1,3 +1,5 @@
+POR CONVENÇÃO INTERNACIONAL, É RECOMENDADO A UTILIZAÇÃO DOS COMANDOS/PALAVRA-CHAVE EM MAIÚSCULA.
+
 create table disciplina(
     cd_disciplina numeric(10) primary key,
     nm_disciplina varchar2(50) not null,
