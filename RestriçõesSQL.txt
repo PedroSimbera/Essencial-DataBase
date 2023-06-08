@@ -1,0 +1,13 @@
+As restrições (constraints) no SQL são utilizadas para impor regras e limitações sobre os dados armazenados em um banco de dados relacional. Elas ajudam a garantir a integridade dos dados e a consistência das operações realizadas. Existem vários tipos de restrições disponíveis no SQL, sendo as mais comuns as seguintes:
+
+Restrição de Chave Primária (Primary Key Constraint): A restrição de chave primária é usada para definir uma coluna ou um conjunto de colunas como chave primária de uma tabela. A chave primária é única para cada registro e garante a identificação exclusiva de cada linha na tabela.
+
+Restrição de Chave Estrangeira (Foreign Key Constraint): A restrição de chave estrangeira é utilizada para estabelecer uma relação entre duas tabelas em um banco de dados relacional. Ela especifica que os valores em uma coluna (ou conjunto de colunas) em uma tabela devem corresponder aos valores existentes em uma coluna de outra tabela.
+
+Restrição de Unicidade (Unique Constraint): A restrição de unicidade garante que os valores em uma coluna (ou conjunto de colunas) sejam únicos dentro de uma tabela. Ou seja, não pode haver duplicação de valores em uma coluna com a restrição de unicidade.
+
+Restrição de Verificação (Check Constraint): A restrição de verificação é usada para definir uma condição ou expressão que os valores em uma coluna devem satisfazer. Essa restrição garante que apenas valores válidos sejam inseridos na coluna.
+
+Restrição de Não Nulo (Not Null Constraint): A restrição de não nulo especifica que uma coluna não pode conter valores nulos. Ela garante que a coluna sempre tenha algum valor definido, impedindo a inserção de registros com valores ausentes.
+
+Essas restrições podem ser aplicadas durante a criação de tabelas ou adicionadas posteriormente usando comandos de alteração da estrutura da tabela. Elas desempenham um papel fundamental na manutenção da consistência e integridade dos dados em um banco de dados relacional, ajudando a evitar inconsistências e garantindo a conformidade com as regras de negócio definidas.
