@@ -30,3 +30,8 @@ select
     first_name as nome, salary as "Salario mensal", salary*12 as "Salario anual", 
     salary*10/100 as "Acrescimento de 10%", salary+(salary*10/100) as "Salario com Acrescimento de 10%"
 from employees
+
+Concatenação de colunas:
+
+select last_name as Nome, job_id as Cargo, last_name || 'Tem o cargo de ' || Job_id "Nome & Cargo"
+FROM employees
