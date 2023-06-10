@@ -20,3 +20,16 @@ Já na segunda estamos fazendo de forma implícita e precisa seguir a ordem dos 
 A outra forma com variáveis de substituição. Geralmente com Declare e Begin.
 
 
+INSERT INTO disciplina VALUES (30, 'Python', 360);
+
+INSERT INTO disciplina VALUES (40, 'Java', 80);
+
+UPDATE disciplina SET qt_carga_horaria = 80
+WHERE cd_disciplina = 30 AND nm_disciplina = 'Python';
+
+UPDATE disciplina SET qt_carga_horaria = 60
+WHERE cd_disciplina = 40 AND nm_disciplina = 'Java';
+
+SELECT * FROM disciplina;
+
+Se o UPDATE for feito sem o WHERE todas as linhas daquela coluna pode ser alterada.
