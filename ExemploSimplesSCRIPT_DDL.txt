@@ -14,8 +14,11 @@ create table professor(
     nm_professor varchar2(100) not null,
     ic_sexo_professor char(1) check (ic_sexo_professor='M' or ic_sexo_professor='F' or ic_sexo_professor='O'),
     cd_cpf numeric(11) unique,
-    cd_disciplina numeric(10) references disciplina (cd_disciplina)
+    cd_disciplina numeric(10)
 );
+
+ALTER TABLE cd_disciplina ADD CONSTRAINT fk_cd_disciplina FOREIGN KEY (cd_disciplina)
+REFERENCES disciplina(cd_disciplina);
 
 create table aluno(
     cd_registro_academico numeric(15) primary key,
