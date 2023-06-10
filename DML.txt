@@ -33,3 +33,15 @@ WHERE cd_disciplina = 40 AND nm_disciplina = 'Java';
 SELECT * FROM disciplina;
 
 Se o UPDATE for feito sem o WHERE todas as linhas daquela coluna pode ser alterada.
+
+Exemplo de DELETE
+
+INSERT INTO disciplina VALUES (60,  'Calculo', 80);
+
+DELETE FROM disciplina
+WHERE nm_disciplina = 'Calculo' AND cd_disciplina = 60;
+
+Se o delete for feito sem a cláusula WHERE será deletado todas linhas.
+
+O Delete precisa informar a tabela, e o Where por sua vez fará a função de identificar qual a linha que será excluída por completo.
+
