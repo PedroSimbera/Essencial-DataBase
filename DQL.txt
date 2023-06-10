@@ -6,3 +6,20 @@ USANDO O SELECT
 1. É possível fazer o select em uma tabela toda
 2. É possível fazer o select em parte de uma tabela
 3. É possível fazer o select em parte de duas tabelas
+
+SELECT - qual coluna 
+FROM - qual tabela
+* todas
+nm_tabela - determinada
+
+Formas de chamar uma seleção e apelidar as colunas para melhor visualização do retorno:
+
+select * from employees
+
+select first_name,hire_date, salary, department_id from employees
+
+select first_name nome, salary salario, department_id "local de trabalho"
+from employees
+
+select first_name as nome, salary as salario, department_id as "local de trabalho"
+from employees
