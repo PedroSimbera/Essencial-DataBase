@@ -35,3 +35,7 @@ Concatenação de colunas:
 
 select last_name as Nome, job_id as Cargo, last_name || 'Tem o cargo de ' || Job_id "Nome & Cargo"
 FROM employees
+
+Para evitar as repetições:
+
+SELECT DISTINCT JOB_TITLE FROM JOBS
