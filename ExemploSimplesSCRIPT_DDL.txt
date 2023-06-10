@@ -68,3 +68,12 @@ desc aula
 drop table aula;
 FLASHBACK  TABLE  aula  TO  BEFORE DROP; 
 desc aula
+
+desc disciplina
+
+INSERT INTO disciplina (cd_disciplina, nm_disciplina, qt_carga_horaria)
+VALUES (10, 'Modelagem de Banco de Dados', 80);
+
+INSERT INTO disciplina VALUES (20, 'Data Science', 360);
+
+SELECT * FROM disciplina;
