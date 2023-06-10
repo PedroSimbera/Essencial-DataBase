@@ -77,3 +77,15 @@ VALUES (10, 'Modelagem de Banco de Dados', 80);
 INSERT INTO disciplina VALUES (20, 'Data Science', 360);
 
 SELECT * FROM disciplina;
+
+INSERT INTO disciplina VALUES (30, 'Python', 360);
+
+INSERT INTO disciplina VALUES (40, 'Java', 80);
+
+UPDATE disciplina SET qt_carga_horaria = 80
+WHERE cd_disciplina = 30 AND nm_disciplina = 'Python';
+
+UPDATE disciplina SET qt_carga_horaria = 60
+WHERE cd_disciplina = 40 AND nm_disciplina = 'Java';
+
+SELECT * FROM disciplina;
