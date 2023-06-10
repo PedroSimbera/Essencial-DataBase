@@ -1,1 +1,8 @@
 Data Query Language
+
+USANDO O SELECT
+
+
+1. É possível fazer o select em uma tabela toda
+2. É possível fazer o select em parte de uma tabela
+3. É possível fazer o select em parte de duas tabelas
