@@ -23,3 +23,10 @@ from employees
 
 select first_name as nome, salary as salario, department_id as "local de trabalho"
 from employees
+
+É possível fazer operações com os retornos para simular e apresentar possíveis cenários
+
+select 
+    first_name as nome, salary as "Salario mensal", salary*12 as "Salario anual", 
+    salary*10/100 as "Acrescimento de 10%", salary+(salary*10/100) as "Salario com Acrescimento de 10%"
+from employees
