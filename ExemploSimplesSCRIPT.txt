@@ -89,3 +89,12 @@ UPDATE disciplina SET qt_carga_horaria = 60
 WHERE cd_disciplina = 40 AND nm_disciplina = 'Java';
 
 SELECT * FROM disciplina;
+
+INSERT INTO disciplina VALUES (60,  'Calculo', 80);
+
+SELECT * FROM disciplina;
+
+DELETE FROM disciplina
+WHERE nm_disciplina = 'Calculo' AND cd_disciplina = 60;
+
+SELECT * FROM disciplina;
