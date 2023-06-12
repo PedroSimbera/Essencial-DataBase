@@ -1,0 +1,41 @@
+Em SQL (Structured Query Language), existem várias funções disponíveis para manipular e processar dados em um banco de dados relacional. Essas funções podem ser divididas em várias categorias, como funções de agregação, funções de data e hora, funções de string, funções matemáticas, funções de conversão e muito mais. 
+
+Algumas funções (não todas):
+
+Funções de Agregação:
+
+COUNT: Retorna o número de linhas em um conjunto de resultados.
+SUM: Retorna a soma dos valores de uma coluna numérica.
+AVG: Retorna a média dos valores de uma coluna numérica.
+MIN: Retorna o valor mínimo em uma coluna.
+MAX: Retorna o valor máximo em uma coluna.
+GROUP_CONCAT: Concatena valores de uma coluna em uma única string.
+
+Funções de Data e Hora:
+
+NOW: Retorna a data e hora atuais.
+DATE: Extrai a parte da data de uma coluna de data/hora.
+EXTRACT: Extrai uma parte específica (ano, mês, dia, etc.) de uma coluna de data/hora.
+DATE_ADD: Adiciona uma quantidade específica de tempo a uma coluna de data/hora.
+DATE_DIFF: Calcula a diferença entre duas colunas de data/hora.
+
+Funções de String:
+
+CONCAT: Concatena duas ou mais strings.
+LENGTH: Retorna o comprimento de uma string.
+UPPER: Converte uma string em maiúsculas.
+LOWER: Converte uma string em minúsculas.
+SUBSTRING: Extrai uma parte de uma string com base em uma posição e comprimento.
+
+Funções Matemáticas:
+
+ABS: Retorna o valor absoluto de um número.
+ROUND: Arredonda um número para o número de casas decimais especificado.
+CEILING: Arredonda um número para cima para o inteiro mais próximo.
+FLOOR: Arredonda um número para baixo para o inteiro mais próximo.
+POWER: Retorna o resultado de um número elevado a uma potência específica.
+
+Funções de Conversão:
+
+CAST: Converte um valor de um tipo de dado para outro.
+CONVERT: Converte um valor de um tipo de dado para outro (dependente do banco de dados).
