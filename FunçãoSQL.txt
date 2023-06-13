@@ -39,3 +39,8 @@ Funções de Conversão:
 
 CAST: Converte um valor de um tipo de dado para outro.
 CONVERT: Converte um valor de um tipo de dado para outro (dependente do banco de dados).
+
+Funções de Decisões:
+
+NVL: Substitui o valor dos nulos por algum valor estabelecido
+DECODE e CASE são similares e fazem analogia ao IF ELSE - se determinada condição/expressão for como estabelecido, algo será implementado.
