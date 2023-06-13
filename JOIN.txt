@@ -23,3 +23,17 @@ JOIN departments d
 ON d.department_id = e.department_id
 JOIN locations l
 ON d.location_id = l.location_id;
+
+Não Idênticas - Apesar de o exemplo ter como relacionar com o job_id de employees e jobs, a ideia do não Idênticas
+é quando não tem ou não se faz uma relação por meio de igualdade entre chave primária e chave estrangeira, busca-se
+uma relação entre elas, e no caso seria a averiguação daqueles salários que estão dentre da faixa salarial do plano
+de carreiras, min e max. Para tanto, note que busca pelo salary between duas colunas e não por salary = salary:
+SELECT e.employee_id, e.first_name, e.salary, j.min_salary, j.max_salary
+FROM employees e JOIN jobs j
+ON e.salary
+NOT BETWEEN j.min_salary AND j.max_salary;
+
+SELECT e.employee_id, e.first_name, e.salary, j.min_salary, j.max_salary
+FROM employees e JOIN jobs j
+ON e.salary
+BETWEEN j.min_salary AND j.max_salary;
