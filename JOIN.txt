@@ -51,3 +51,8 @@ SELECT e.last_name, d.department_id, d.department_name
 FROM hr.employees e LEFT OUTER JOIN hr.departments d
 ON (e.department_id = d.department_id)
 	ORDER BY 1;
+
+SELECT e.last_name, d.department_id, d.department_name
+FROM hr.employees e 
+RIGHT OUTER JOIN hr.departments d
+ON (e.department_id = d.department_id);
