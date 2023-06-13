@@ -45,7 +45,7 @@ ON (e.sal BETWEEN s.losal AND s.hisal);
 AutoJunção:
 Quando as informações que precisa está na mesma tabela. Usado, por exemplo, ao inferir que é o gerente do funcionário, sabendo que o gerente também é um funcionário. Logo, essas info estão dentro da mesma tabela.
 
-SELECT  empregado.last_name || ' trabalha para ' ||  gerente.last_name 
+SELECT  empregado.last_name || ' trabalha para ' ||  gerente.last_name "funcionário e gerente"
 FROM hr.employees empregado
 JOIN hr.employees gerente
 ON (empregado.manager_id = gerente.employee_id);
