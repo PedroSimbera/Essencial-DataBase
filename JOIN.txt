@@ -41,3 +41,13 @@ BETWEEN j.min_salary AND j.max_salary;
 *** SELECT e.ename,e.sal,s.grade,s.losal,s.hisal
 FROM scott.emp e JOIN salgrade s
 ON (e.sal BETWEEN s.losal AND s.hisal);
+
+Junção Externa:
+Uma junção externa (outer join) é uma operação de junção em SQL que retorna registros de duas ou mais tabelas, incluindo os registros que não possuem correspondência entre as tabelas relacionadas. Em outras palavras, uma junção externa inclui os registros das tabelas mesmo quando não há correspondência entre as colunas relacionadas.
+Além disso, tem de escolher o left, right ou full, que estão relacionados, respectivamente, com o comando que está a esquerda do join, entendendo que este é o privilegiado, o mesmo com o right. Ou que apareça todos.
+Mais do que isso, trata-se de privilegiar no  sentido de apresentar os dados da tabela a esquerda/direita ainda que não tenha correspondência com a outra tabela. 
+
+SELECT e.last_name, d.department_id, d.department_name
+FROM hr.employees e LEFT OUTER JOIN hr.departments d
+ON (e.department_id = d.department_id)
+	ORDER BY 1;
