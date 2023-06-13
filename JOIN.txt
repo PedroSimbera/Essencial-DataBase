@@ -42,6 +42,16 @@ BETWEEN j.min_salary AND j.max_salary;
 FROM scott.emp e JOIN salgrade s
 ON (e.sal BETWEEN s.losal AND s.hisal);
 
+AutoJunção:
+Quando as informações que precisa está na mesma tabela. Usado, por exemplo, ao inferir que é o gerente do funcionário, sabendo que o gerente também é um funcionário. Logo, essas info estão dentro da mesma tabela.
+
+SELECT  empregado.last_name || ' trabalha para ' ||  gerente.last_name 
+FROM hr.employees empregado
+JOIN hr.employees gerente
+ON (empregado.manager_id = gerente.employee_id);
+   
+
+
 Junção Externa:
 Uma junção externa (outer join) é uma operação de junção em SQL que retorna registros de duas ou mais tabelas, incluindo os registros que não possuem correspondência entre as tabelas relacionadas. Em outras palavras, uma junção externa inclui os registros das tabelas mesmo quando não há correspondência entre as colunas relacionadas.
 Além disso, tem de escolher o left, right ou full, que estão relacionados, respectivamente, com o comando que está a esquerda do join, entendendo que este é o privilegiado, o mesmo com o right. Ou que apareça todos.
