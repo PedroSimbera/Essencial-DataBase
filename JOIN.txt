@@ -5,6 +5,7 @@ Exitem formas de realizar a relação das tabelas com JOIN:
 2. Não-Idênticas
 3. AutoJunção
 4. Junção Externa
+5. Natural Join
 
 Idênticas - Com e sem apelido. Trata-se de unir o nome da tabela com a coluna dela e depois o FROM e JOIN com o ON (relação de chave primária com estrangeira):
 SELECT e.empno, e.ename, e.deptno, d.deptno, d.loc
@@ -72,3 +73,13 @@ FROM hr.employees e
 FULL OUTER JOIN hr.departments d
 ON (e.department_id = d.department_id)
     ORDER BY 3 DESC;
+
+
+Natural Join (geralmente evitado o uso):
+combina automaticamente colunas com os mesmos nomes em tabelas diferentes. Em vez de especificar explicitamente as colunas a serem combinadas, o "NATURAL JOIN" realiza a junção com base nas colunas que têm o mesmo nome em ambas as tabelas.
+
+SELECT colunas
+FROM tabela1
+NATURAL JOIN tabela2;
+
+Nessa sintaxe, não é necessário especificar a condição de junção com o operador "ON". O "NATURAL JOIN" automaticamente identifica as colunas correspondentes com o mesmo nome nas tabelas e realiza a junção com base nelas.
