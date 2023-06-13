@@ -56,3 +56,9 @@ SELECT e.last_name, d.department_id, d.department_name
 FROM hr.employees e 
 RIGHT OUTER JOIN hr.departments d
 ON (e.department_id = d.department_id);
+
+SELECT e.last_name, d.department_id, d.department_name
+FROM hr.employees e 
+FULL OUTER JOIN hr.departments d
+ON (e.department_id = d.department_id)
+    ORDER BY 3 DESC;
