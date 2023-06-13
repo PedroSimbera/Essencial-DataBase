@@ -1,2 +1,25 @@
 Formas de relacionar mais de uma tabela do esquema
 
+Exitem formas de realizar a relação das tabelas com JOIN:
+1. Idênticas e Tridimensionais
+2. Não-Idênticas
+3. AutoJunção
+4. Junção Externa
+
+Idênticas - Com e sem apelido. Trata-se de unir o nome da tabela com a coluna dela e depois o FROM e JOIN com o ON (relação de chave primária com estrangeira):
+SELECT e.empno, e.ename, e.deptno, d.deptno, d.loc
+FROM scott.emp e JOIN scott.dept d
+ON (e.deptno=d.deptno);
+
+SELECT emp.empno, emp.ename, emp.deptno, dept.deptno, dept.loc
+FROM scott.emp JOIN scott.dept 
+ON (emp.deptno=dept.deptno);
+
+Tridimensionais - Junção na mesma consulta de mais de duas tabelas, ainda com similaridades entre chave estrangeira e primária
+nas tabelas :
+SELECT employee_id, city, department_name
+FROM employees e
+JOIN departments d
+ON d.department_id = e.department_id
+JOIN locations l
+ON d.location_id = l.location_id;
