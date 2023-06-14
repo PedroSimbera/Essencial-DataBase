@@ -20,3 +20,5 @@ Exemplo: SELECT coluna, COUNT(*) FROM tabela GROUP BY coluna;
 
 HAVING: É usado em combinação com a cláusula GROUP BY para filtrar grupos com base em uma condição.
 Exemplo: SELECT coluna, COUNT(*) FROM tabela GROUP BY coluna HAVING COUNT(*) > 10;
+
+STDDEV: É usada para calcular o desvio padrão de um conjunto de valores em uma coluna numérica em um banco de dados SQL. Exemplo: SELECT STDDEV(coluna) FROM tabela;
