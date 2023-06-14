@@ -1,0 +1,22 @@
+As funções de grupo são usadas para realizar cálculos agregados em conjuntos de dados. Essas funções operam em um grupo de linhas e retornam um único valor calculado com base nas colunas especificadas.
+
+COUNT: Retorna o número de linhas em um grupo.
+Exemplo: SELECT COUNT(*) FROM tabela;
+
+SUM: Retorna a soma dos valores em uma coluna numérica.
+Exemplo: SELECT SUM(coluna) FROM tabela;
+
+AVG: Retorna a média dos valores em uma coluna numérica.
+Exemplo: SELECT AVG(coluna) FROM tabela;
+
+MIN: Retorna o valor mínimo em uma coluna.
+Exemplo: SELECT MIN(coluna) FROM tabela;
+
+MAX: Retorna o valor máximo em uma coluna.
+Exemplo: SELECT MAX(coluna) FROM tabela;
+
+GROUP BY: Agrupa as linhas com base em uma ou mais colunas e permite a aplicação de funções de grupo a cada grupo individualmente.
+Exemplo: SELECT coluna, COUNT(*) FROM tabela GROUP BY coluna;
+
+HAVING: É usado em combinação com a cláusula GROUP BY para filtrar grupos com base em uma condição.
+Exemplo: SELECT coluna, COUNT(*) FROM tabela GROUP BY coluna HAVING COUNT(*) > 10;
