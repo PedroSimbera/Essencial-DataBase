@@ -1,0 +1,12 @@
+Existem views simples e complexas!
+
+As simples:
+Uma view em SQL é uma consulta armazenada como um objeto no banco de dados. Ela permite criar uma "visão" personalizada dos dados, que pode ser consultada posteriormente como uma tabela virtual.
+CREATE VIEW vw_clientes AS
+SELECT id, nome, email
+FROM clientes
+WHERE status = 'ativo';
+
+Após a criação da view, podemos consultá-la como se fosse uma tabela real:
+SELECT * FROM vw_clientes;
+Isso retornará os registros selecionados pela view.
