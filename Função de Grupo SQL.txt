@@ -44,3 +44,5 @@ FROM EMPLOYEES;
 SELECT AVG(SALARY), DEPARTMENT_ID, JOB_ID
 FROM EMPLOYEES
 GROUP BY DEPARTMENT_ID, JOB_ID;
+
+*Destaca-se: o HAVING cria uma condição para a função de grupo! Diferente do Where que é condição para a seleção;
