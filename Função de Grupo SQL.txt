@@ -92,10 +92,16 @@ Utiliza IN ANY(or) ALL(and)
 
 SELECT ename, empno, job, sal
 	FROM scott.emp
-	WHERE sal < ANY
+	WHERE sal < ANY --or -- qualquer
     			(SELECT sal FROM scott.emp WHERE job = 'CLERK')
 
     AND   job <> 'CLERK';
 
 Verificando na subconsulta os salarios do cargo CLERK, e levando para o where da consulta a busca por salarios menores que qualquer salario retornado pela subconsulta, que não seja CLERK (segunda condição and do where). 
 				
+SELECT ename, empno, job, sal
+	FROM scott.emp
+	WHERE sal > ALL --and -- maior que todos os retornos
+    			(SELECT avg(sal) FROM scott.emp GROUP BY deptno);
+
+Está sendo selecionado a média salarial dos empregados, agrupados por cada departamento, em sede de subconsulta. Após isso, verifica qual funcionário e seu salário e maior que todas as médias salariais retornadas.
