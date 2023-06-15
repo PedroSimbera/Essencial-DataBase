@@ -74,3 +74,14 @@ SELECT ename
 			(SELECT sal FROM scott.emp WHERE empno=7566);
 
 IMPORTANTE USAR A INDENTAÇÃO PARA FACILITAR A LEITURA;
+
+Existem outras variações para pensar em subconsulta, seja pela quantidade de valor retornado ou pela correlação ou não da subconsulta com a consulta externa.
+
+Uma linha:
+SELECT ename
+	FROM scott.emp
+	WHERE job =
+    			(SELECT job FROM scott.emp WHERE empno=7369)
+
+    AND   sal >
+				(SELECT sal FROM scott.emp WHERE empno=7876);
