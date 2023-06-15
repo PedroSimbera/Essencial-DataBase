@@ -46,3 +46,8 @@ FROM EMPLOYEES
 GROUP BY DEPARTMENT_ID, JOB_ID;
 
 *Destaca-se: o HAVING cria uma condição para a função de grupo! Diferente do Where que é condição para a seleção;
+
+SELECT deptno, max(sal)
+	FROM scott.emp
+	GROUP BY deptno
+	HAVING max(sal)>2900;
