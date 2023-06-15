@@ -85,3 +85,17 @@ SELECT ename
 
     AND   sal >
 				(SELECT sal FROM scott.emp WHERE empno=7876);
+
+Varias linhas:
+
+Utiliza IN ANY(or) ALL(and)
+
+SELECT ename, empno, job, sal
+	FROM scott.emp
+	WHERE sal < ANY
+    			(SELECT sal FROM scott.emp WHERE job = 'CLERK')
+
+    AND   job <> 'CLERK';
+
+Verificando na subconsulta os salarios do cargo CLERK, e levando para o where da consulta a busca por salarios menores que qualquer salario retornado pela subconsulta, que não seja CLERK (segunda condição and do where). 
+				
