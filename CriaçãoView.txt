@@ -10,3 +10,15 @@ WHERE status = 'ativo';
 Após a criação da view, podemos consultá-la como se fosse uma tabela real:
 SELECT * FROM vw_clientes;
 Isso retornará os registros selecionados pela view.
+
+
+complexas:
+
+Uma view complexa em SQL pode envolver consultas mais elaboradas, como junções (joins), subconsultas e agregações. Ela permite criar uma visão personalizada e consolidada dos dados de várias tabelas.
+
+CREATE VIEW vw_vendas_por_cliente AS
+SELECT c.nome AS cliente, COUNT(v.id) AS total_vendas, SUM(v.valor) AS total_valor
+FROM clientes c
+JOIN pedidos p ON c.id = p.cliente_id
+JOIN vendas v ON p.id = v.pedido_id
+GROUP BY c.nome;
