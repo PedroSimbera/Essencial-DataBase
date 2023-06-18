@@ -1,0 +1,20 @@
+No Oracle, uma sequence é um objeto do banco de dados usado para gerar valores numéricos sequenciais. Esses valores podem ser utilizados, por exemplo, para gerar chaves primárias únicas em tabelas.
+
+CREATE SEQUENCE minha_sequence
+  START WITH 1
+  INCREMENT BY 1
+  NOCACHE
+  NOCYCLE;
+Neste exemplo, estamos criando uma sequence chamada "minha_sequence".
+
+O parâmetro "START WITH" define o valor inicial da sequence, neste caso, é 1.
+O parâmetro "INCREMENT BY" especifica o valor pelo qual a sequence deve ser incrementada, neste caso, é 1.
+"NOCACHE" indica que o Oracle não deve armazenar em cache valores pré-carregados da sequence, o que significa que cada valor é gerado sob demanda. Isso é útil para garantir que os valores sequenciais não sejam perdidos em caso de reinicialização do banco de dados.
+"NOCYCLE" especifica que a sequence não deve voltar ao valor inicial após atingir o valor máximo. Se a cláusula "NOCYCLE" for omitida, a sequence voltará ao valor inicial após atingir o valor máximo.
+Depois de criar a sequence, você pode usá-la para gerar valores sequenciais em uma coluna de uma tabela, por exemplo:
+
+INSERT INTO minha_tabela (id, nome) VALUES (minha_sequence.NEXTVAL, 'Exemplo');
+
+A função NEXTVAL é usada para obter o próximo valor da sequence e é comumente usada em uma cláusula VALUES durante uma inserção de dados.
+
+Além disso, existem várias opções adicionais disponíveis ao criar uma sequence, como definir um valor máximo (MAXVALUE), um valor mínimo (MINVALUE), definir a ordem de geração dos valores (ORDER), entre outras. Você pode consultar a documentação do Oracle para obter mais informações sobre essas opções.
