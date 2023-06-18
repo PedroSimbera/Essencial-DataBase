@@ -1,0 +1,51 @@
+Em bancos de dados relacionais, um índice em SQL é uma estrutura que melhora a eficiência das consultas ao acelerar a recuperação de dados de uma tabela. Ele permite que o banco de dados localize rapidamente os registros relevantes com base nos valores de uma ou mais colunas especificadas.
+
+Aqui estão alguns aspectos importantes sobre índices em SQL:
+
+Propósito do Índice: O objetivo principal de um índice é melhorar o desempenho das consultas. Ao criar um índice em uma ou mais colunas de uma tabela, o banco de dados cria uma estrutura adicional que permite a pesquisa otimizada e a recuperação rápida dos registros.
+
+Tipos de Índices: Existem diferentes tipos de índices que podem ser usados em SQL, dependendo do banco de dados específico. Alguns dos tipos comuns são índices de árvore B (B-tree), índices hash, índices de bitmap e índices de texto completo.
+
+Colunas Indexadas: Ao criar um índice, você precisa especificar as colunas que deseja indexar. Geralmente, são escolhidas as colunas frequentemente usadas em cláusulas WHERE, JOIN e ORDER BY em consultas. Isso ajuda a reduzir o tempo necessário para localizar os registros correspondentes.
+
+Overhead: Os índices têm um certo overhead em termos de espaço de armazenamento e impacto nas operações de escrita (inserção, atualização e exclusão de registros). Cada vez que os dados são alterados, o índice correspondente precisa ser atualizado para manter a consistência. Portanto, é importante equilibrar a criação de índices com as necessidades de desempenho e as operações de manipulação de dados.
+
+Atualização de Índices: À medida que os dados são inseridos, atualizados ou excluídos de uma tabela indexada, os índices devem ser atualizados para refletir essas alterações. Alguns bancos de dados possuem processos automáticos de manutenção de índices, enquanto outros requerem que os índices sejam recriados ou atualizados manualmente.
+
+Estatísticas de Índice: Os bancos de dados mantêm estatísticas sobre os índices, como a cardinalidade (número de valores distintos) das colunas indexadas. Essas estatísticas ajudam o otimizador de consultas a tomar decisões sobre o plano de execução mais eficiente.
+
+Uso Adequado de Índices: É importante analisar cuidadosamente os padrões de acesso aos dados e as consultas executadas em uma tabela antes de criar índices. Criar índices desnecessários ou inadequados pode resultar em sobrecarga e impacto negativo no desempenho das operações de escrita.
+
+
+
+
+No Oracle, você pode criar índices usando a declaração CREATE INDEX. 
+
+CREATE INDEX nome_do_indice
+ON nome_da_tabela (coluna1, coluna2, ...);
+
+
+CREATE INDEX: Indica que você está criando um novo índice.
+
+nome_do_indice: Especifica o nome que você deseja atribuir ao índice. Certifique-se de escolher um nome descritivo e único para o índice.
+
+ON nome_da_tabela: Indica em qual tabela você deseja criar o índice.
+
+(coluna1, coluna2, ...): Especifica as colunas da tabela que serão incluídas no índice. Você pode fornecer uma ou mais colunas. O índice será criado com base nos valores nessas colunas.
+
+
+CREATE INDEX idx_nome
+ON clientes (nome);
+
+
+Além disso, o Oracle oferece várias opções adicionais que podem ser usadas ao criar um índice. Algumas das opções comuns incluem:
+
+UNIQUE: Especifica que o índice criado deve conter valores exclusivos.
+
+DESC: Especifica que o índice deve ser classificado em ordem decrescente em vez de ordem crescente (padrão).
+
+TABLESPACE: Especifica o tablespace no qual o índice deve ser armazenado.
+
+COMPRESSION: Habilita a compressão de dados do índice para economizar espaço de armazenamento.
+
+PARALLEL: Especifica o grau de paralelismo para a criação e manutenção do índice.
